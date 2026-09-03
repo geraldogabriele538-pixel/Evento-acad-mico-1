@@ -5,6 +5,146 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Evento Acadêmico — Sistema de Gestão</title>
 <link rel="stylesheet" href="/style.css">
+<style>/* --- ESTILOS BONITINHOS E ORGANIZADOS --- */
+
+/* 1. Fonte e fundo gerais */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7fc; /* Fundo azulado claro */
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* 2. Centraliza e limita a largura do conteúdo principal */
+.container, .main-content, body > * { /* Adapte o seletor se necessário */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 3. Estilo para os títulos principais */
+h1, h2, h3 {
+    color: #1a3b5d; /* Azul escuro */
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 3px solid #4a90e2; /* Linha decorativa */
+    padding-bottom: 10px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    border-bottom: none;
+    color: #0a2647;
+}
+
+/* 4. Estilo para os "cards" ou seções (as caixas) */
+section, .card, .section-card, form {
+    background-color: #ffffff;
+    padding: 25px 30px;
+    margin-bottom: 30px;
+    border-radius: 12px; /* Cantos arredondados */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Sombra suave */
+    border-left: 6px solid #4a90e2; /* Detalhe lateral */
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+section:hover, .card:hover {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* 5. Melhorias para formulários e campos */
+label {
+    display: block;
+    font-weight: 600;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #1a3b5d;
+}
+
+input, select, textarea, button {
+    width: 100%;
+    padding: 12px 15px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #d0dbe8;
+    border-radius: 8px;
+    font-size: 1em;
+    box-sizing: border-box; /* Importante para não estourar a caixa */
+    transition: border-color 0.2s, box-shadow 0.2s;
+    background-color: #fafcff;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+    outline: none;
+}
+
+button, .button {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1em;
+    cursor: pointer;
+    width: auto; /* Para não ocupar 100% */
+    transition: background-color 0.2s, transform 0.1s;
+    box-shadow: 0 2px 6px rgba(74, 144, 226, 0.3);
+}
+
+button:hover, .button:hover {
+    background-color: #357abd;
+    transform: scale(1.02);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* 6. Ajustes para tabelas (se houver) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 0.95em;
+}
+
+th {
+    background-color: #eaf1fb;
+    color: #1a3b5d;
+    font-weight: 600;
+    padding: 12px 10px;
+    text-align: left;
+    border-bottom: 2px solid #4a90e2;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #e0e8f0;
+}
+
+tr:hover {
+    background-color: #f4f9ff;
+}
+
+/* 7. Responsividade básica */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    section, .card {
+        padding: 15px;
+    }
+    h1 {
+        font-size: 2em;
+    }
+}</style>
 </head>
 <body>
 
